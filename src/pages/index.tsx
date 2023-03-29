@@ -33,7 +33,7 @@ export default function Home() {
         <svg className='fill-slate-100 w-3 h-3 mt-[6px]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
         </svg>
       </div>
-      <div className="flex gap-4 justify-center">
+      <div className="flex gap-4 justify-center mx-2">
         <ImageWithCaption url={'/d602f6e126d02c40c19852574a800962.jpg'} text={'Seafood'} />
         <ImageWithCaption url={'/R.jpeg'} text={'Hewani'} />
         <ImageWithCaption url={'/sayur-sop-vegetable-soup-sayur-sop-vegetable-chicken-soup-indonesian-culinary-122954274.jpg'} text={'Nabati'} />
