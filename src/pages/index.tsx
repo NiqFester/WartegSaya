@@ -14,7 +14,7 @@ export default function Home() {
   const arrayMakanan: ArrayMakanan = [
     { photo: '/makanan/ati.jpg', nama: 'Ati Ampela' },
     { photo: '/makanan/cumi.jpg', nama: 'Cumi Hitam' },
-    { photo: '/makanan/ikan Bawal.jpg', nama: 'Ikan Bawal Goreng' },
+    { photo: '/makanan/ikan bawal.jpg', nama: 'Ikan Bawal Goreng' },
     { photo: '/makanan/kikil.jpg', nama: 'Kikil' },
     { photo: '/makanan/telor bulet.jpg', nama: 'Telur Balado' },
     { photo: '/makanan/telur-ceplok-kecap-foto-resep-utama.jpg', nama: 'Telur Ceplok' },
