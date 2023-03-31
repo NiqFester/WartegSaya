@@ -2,7 +2,6 @@ import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import Header from "@/component/header/header";
 import Footing from "@/component/footer/footer";
 import DivMakanan from '@/component/divMakanan/divMakanan'
-import './global'
 
 export default function Semua({data}:{data: produk[]}){
     return (

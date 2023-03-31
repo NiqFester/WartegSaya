@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Dispatch, SetStateAction, useContext } from "react";
 import {PesananContext} from '@/context/Pesanan'
-import '../../../global'
 
 function formatHarga(x:number) {
   return new Intl.NumberFormat("id-ID", {

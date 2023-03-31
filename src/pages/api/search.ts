@@ -1,7 +1,6 @@
 import path from "path";
 import fs from "fs"; //allows to read and overwrite data
 import type { NextApiRequest, NextApiResponse } from 'next'
-import './global'
 function extractData(filePath:string) {
   //extract data.json and extract the data
   const jsonData= fs.readFileSync(filePath);

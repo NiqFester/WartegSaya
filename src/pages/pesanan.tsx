@@ -3,7 +3,6 @@ import Footing from "@/component/footer/footer";
 import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import List from "@/component/Pesanan/list";
 import Total from "@/component/Pesanan/total";
-import Image from "next/image";
 import { PesananContext } from "@/context/Pesanan";
 import { useContext, useEffect, useRef, useState } from "react";
 
