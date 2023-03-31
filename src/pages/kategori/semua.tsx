@@ -13,6 +13,8 @@ export default function Semua({data}:{data: produk[]}){
           return <DivMakanan key={i} src={x.photo} text={x.nama} harga={x.harga} id={x.id}/>
         })}
       </div>
+      <div className="w-[100vw] h-[80px] bg-transparent"></div>
+
       <Footing />
     </div>
     )

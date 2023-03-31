@@ -1,4 +1,5 @@
-export default function Total({total}:{total:number}) {
+export default function Total({total,pesanWA}:{total:number,pesanWA:string[]}) {
+  
   return (
     <>
       <div className="flex justify-between mt-2 mx-4 border-b-black border-b">
@@ -7,9 +8,9 @@ export default function Total({total}:{total:number}) {
       </div>
       <div className="flex justify-between mt-2 mx-4">
         <div></div>
-        <button className=" rounded-3xl px-2  border-black border  ">
+        <a href={`https://wa.me/6281290167102/${pesanWA.join('%0A')}%0ATerima%20Kasih`} className=" rounded-3xl px-2  border-black border  ">
           Pesan
-        </button>
+        </a>
       </div>
     </>
   );

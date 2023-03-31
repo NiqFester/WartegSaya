@@ -1,6 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from "react";
 import MenuLainya from "@/component/header/menuLainya";
 import Link from "next/link";
+import useSwipe from "@/CustomHook/useSwipe";
 interface Produks {
   id: number;
   nama: string;
@@ -26,38 +27,54 @@ const Header = ({ data }: props) => {
       return x.kategori;
     });
 
+  
   const [menu, setMenu] = useState([false, false]);
   const [enableSearch, setEnable] = useState(false);
-  const [search,setSearch] = useState('')
-  const [searchData, setSearchData] = useState([{id : 0,
-  nama : "tumis kangkung",
-  photo : "/makanan/tumisKangkung.webp",
-  kategori : "tumis dan oseng",
-  harga : 3000}])
+  const [search, setSearch] = useState("");
+  const [searchData, setSearchData] = useState([
+    {
+      id: 0,
+      nama: "tumis kangkung",
+      photo: "/makanan/tumisKangkung.webp",
+      kategori: "tumis dan oseng",
+      harga: 3000,
+    },
+  ]);
 
-  const handleSearch =async () => {
+
+  const SwipeHandler = useSwipe({
+    onSwipedLeft: () => {
+      if(menu[0]) {
+        setMenu((prev) => [!prev[0], prev[1]]);
+      }
+    },
+    onSwipedRight: () => {
+      setMenu((prev) => [!prev[0], prev[1]]);
+    },
+  });
+
+  const handleSearch = async () => {
     try {
-      const response = await fetch(`/api/search?search=${search}`,{
+      const response = await fetch(`/api/search?search=${search}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
-      })
+      });
       const data = await response.json();
-      setSearchData(data.data)
-      
+      setSearchData(data.data);
+    } catch (e) {
+      console.log(e);
     }
-    catch (e) {console.log(e);
-    }
-  }
+  };
 
   return (
-    <div>
+    <div {...SwipeHandler}>
       <MenuLainya menu={menu} setMenu={setMenu} tipe={tipe} />
-      <div className="w-full m-0 h-7 fixed flex justify-between top-0 z-40 bg-gradient-to-br from-slate-900 to-slate-800 ">
+      <div className="w-full m-0 h-10 fixed flex justify-between top-0 z-40 bg-gradient-to-br from-slate-900 to-slate-800 ">
         <div className="flex gap-2">
           <button
-            className="w-3 h-3 ml-2 fill-white bg-transparent mt-[6px]"
+            className="w-5 h-5 ml-2 fill-white bg-transparent mt-[8px]"
             onClick={() => {
               setMenu((prev) => [!prev[0], prev[1]]);
             }}
@@ -70,33 +87,43 @@ const Header = ({ data }: props) => {
               <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
             </svg>
           </button>
-          <Link href={"/"} className="text-white text-sm mt-[3px]">
+          <Link href={"/"} className="text-white text-lg mt-[5px] ml-1">
             Warteg
           </Link>
         </div>
         <div className="mr-3 relative appearance-none flex mt-1">
           <input
             style={{ display: enableSearch ? "inline" : "none" }}
-            className="absolute right-0 pl-5 w-[60vw] focus:outline-none rounded-md "
+            className="absolute right-0 pl-5 w-[60vw] focus:outline-none rounded-md mt-1 "
             type="search"
             name="search"
             id="search"
             value={search}
-            onChange={(e)=>{
-              setSearch(e.target.value)
-              handleSearch()
+            onChange={(e) => {
+              setSearch(e.target.value);
+              handleSearch();
             }}
           />
-          <div className='absolute flex border flex-col right-0 top-6 w-[60vw] ' style={{display: search?'block':'none'}}>
-            {searchData.map((x,i)=>{
+          <div
+            className="absolute flex border flex-col right-0 top-6 w-[60vw] "
+            style={{ display: search ? "block" : "none" }}
+          >
+            {searchData.map((x, i) => {
               return (
-                <Link href={`/kategori/${x.kategori}`} style={{display: search?'block':'none'}} className='bg-white w-full border-t border-t-black '  key={i}>{x.nama}</Link>
-              )
+                <Link
+                  href={`/kategori/${x.kategori}`}
+                  style={{ display: search ? "block" : "none" }}
+                  className="bg-white w-full border-t border-t-black "
+                  key={i}
+                >
+                  {x.nama}
+                </Link>
+              );
             })}
           </div>
 
           <button
-            className="-ml-6 hover:fill-blue-400 m-0 rounded-none z-50 "
+            className="-ml-6 mb-1 hover:fill-blue-400 rounded-none z-50 "
             onClick={() => {
               setEnable((prev) => !prev);
             }}

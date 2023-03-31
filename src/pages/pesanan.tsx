@@ -53,12 +53,18 @@ export default function Pesanan({ data }: props) {
   const [arrPesanan, setArrPesanan] = useState(buatArrPesanan(data, Pesanan));
   const [total, setTotal] = useState(() => {
     let totalharga = 0;
-
     for (const x of arrPesanan) {
       totalharga += x.harga * x.jumlah;
     }
     return totalharga;
   });
+  const [pesanWA,setPesanWA] = useState(()=>{
+    let textArr = []
+    for (const x of arrPesanan) {
+      textArr.push(x.nama + x.jumlah.toString() + 'Porsi')
+    } 
+    return textArr
+  })
 
   useEffect(() => {
     let totalharga = 0;
@@ -66,6 +72,11 @@ export default function Pesanan({ data }: props) {
       totalharga += x.harga * x.jumlah;
     }
     setTotal(totalharga);
+    let textArr = []
+    for (const x of arrPesanan) {
+      textArr.push(x.nama +' ' + x.jumlah.toString()+ ' ' + 'Porsi')
+    } 
+    setPesanWA(textArr)
   }, [Pesanan, arrPesanan]);
 
   return (
@@ -75,7 +86,8 @@ export default function Pesanan({ data }: props) {
       {arrPesanan.map((x, i) => {
         return <List {...x} key={i} setArrPesanan={setArrPesanan} />;
       })}
-      <Total total={total} />
+      <Total total={total} pesanWA={pesanWA} />
+      <div className="w-[100vw] h-[70px] bg-transparent"></div>
       <Footing />
     </>
   );

@@ -52,6 +52,8 @@ export default function Home({data}:props) {
       })}
 
       </div>
+      <div className="w-[100vw] h-[80px] bg-transparent"></div>
+
       <Footing />
     </div>
   )
