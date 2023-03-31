@@ -1,0 +1,209 @@
+{
+    "Produk" : [
+        {
+            "id" : 0,
+            "nama" : "tumis kangkung",
+            "photo" : "/makanan/tumisKangkung.webp",
+            "kategori" : "tumis dan oseng",
+            "harga" : 3000
+        },
+        {
+            "id" : 1,
+            "nama" : "oseng kacang panjang",
+            "photo" : "/makanan/osengKacangPanjang.jpg",
+            
+            "kategori" : "tumis dan oseng",
+            "harga" : 3000
+        },
+        {
+            "id" :2,
+            "nama" : "tempe orek",
+            "photo" : "/makanan/tempeOrek.jpg"
+            ,"kategori" : "tahu tempe",
+            "harga" : 2000
+        },
+        {
+            "id" : 3,
+            "nama" : "sayur tahu",
+            "photo" : "/makanan/sayurTahu.jpg",
+            "kategori" :"tahu tempe",
+            "harga" : 2000
+        },
+        {
+            "id" :4,
+            "nama" : "tempe balok",
+            "photo": "/makanan/tempeBalok.jpg",
+            "kategori" :"tahu tempe",
+            "harga" : 2000
+        },
+        {
+            "id" : 5,
+            "nama": "tahu balok",
+            "photo" : "/makanan/tahuGoreng.jpg",
+            "kategori" : "tahu tempe",
+            "harga" : 2000
+        },
+        {
+            "id" : 6,
+            "nama": "terong balado",
+            "photo" : "/makanan/terongBalado.jpg",
+            "kategori" : "balado",
+            "harga" : 3000
+        },
+        {
+            "id" : 7,
+            "nama": "kentang balado",
+            "photo" : "/makanan/terongBalado.jpg",
+            "kategori" : "balado",
+            "harga" : 3000
+        },
+        {
+            "id" : 8,
+            "nama": "tongkol",
+            "photo" : "/makanan/tongkol.jpg",
+            "kategori" : "seafood",
+            "harga" : 5000
+        },
+        {
+            "id" : 9,
+            "nama": "lele",
+            "photo" : "/makanan/lele.jpg",
+            "kategori" : "seafood",
+            "harga" : 7000
+        },
+        {
+            "id" : 10,
+            "nama": "bawal",
+            "photo" : "/makanan/ikanBawal.jpg",
+            "kategori" : "seafood",
+            "harga" : 5000
+        },
+        {
+            "id" : 11,
+            "nama": "cue",
+            "photo" : "/d602f6e126d02c40c19852574a800962.jpg",
+            "kategori" : "seafood",
+            "harga" : 5000
+        },
+        {
+            "id" : 12,
+            "nama": "teri",
+            "photo" : "/makanan/teri.jpeg",
+            "kategori" : "seafood",
+            "harga" : 5000
+        },
+        {
+            "id" : 13,
+            "nama": "cumi",
+            "photo" : "/makanan/cumi.jpg",
+            "kategori" : "seafood",
+            "harga" : 6000
+        },
+        {
+            "id" : 14,
+            "nama": "telur dadar",
+            "photo" : "/makanan/telorDadar.jpeg",
+            "kategori" : "lauk pauk",
+            "harga" : 4000
+        },
+        {
+            "id" : 15,
+            "nama": "perkedel",
+            "photo" : "/makanan/perkedelKentang.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 2000
+        },
+        {
+            "id" : 16,
+            "nama": "ayam kecap",
+            "photo" : "/R.jpeg",
+            "kategori" : "lauk pauk",
+            "harga" : 6000
+        },
+        {
+            "id" : 17,
+            "nama": "ati",
+            "photo" : "/makanan/ati.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 5000
+        },
+        {
+            "id" : 18,
+            "nama": "usus",
+            "photo" : "/makanan/usus.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 5000
+        },
+        {
+            "id" : 19,
+            "nama": "kikil",
+            "photo" : "/makanan/kikil.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 5000
+        },
+        {
+            "id" : 20,
+            "nama": "telur bulat",
+            "photo" : "/makanan/telorBulet.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 4000
+        },
+        {
+            "id" : 21,
+            "nama": "telur ceplok",
+            "photo" : "/makanan/telur-ceplok-kecap-foto-resep-utama.jpg",
+            "kategori" : "lauk pauk",
+            "harga" : 4000
+        },
+        {
+            "id" : 22,
+            "nama": "sayur sop",
+            "photo" : "/sayur-sop-vegetable-soup-sayur-sop-vegetable-chicken-soup-indonesian-culinary-122954274.jpg",
+            "kategori" : "sayur kuah",
+            "harga" : 3000
+        },
+        {
+            "id" : 23,
+            "nama": "sayur lodeh",
+            "photo" : "/makanan/sayurLodeh.jpeg",
+            "kategori" : "sayur kuah",
+            "harga" : 3000
+        },
+        {
+            "id" : 24,
+            "nama": "sayur asem",
+            "photo" : "/makanan/sayurAsem.jpeg",
+            "kategori" : "sayur kuah",
+            "harga" : 3000
+        },
+        {
+            "id" : 25,
+            "nama": "bakwan",
+            "photo" : "/makanan/bakwanGoreng.jpg",
+            "kategori" : "Lainya",
+            "harga" : 1000
+        },
+        {
+            "id" : 26,
+            "nama": "tempe goreng",
+            "photo" : "/makanan/tempeGoreng.jpg",
+            "kategori" : "Lainya",
+            "harga" : 1000
+        },
+        {
+            "id" : 27,
+            "nama" :"kerupuk",
+            "photo" : "/makanan/kerupuk.jpeg"
+            ,"kategori":"Lainya",
+            "harga": 1000
+        },
+        {
+            "id" : 28,
+            "nama" :"udang",
+            "photo" : "/makanan/ufang.jpg"
+            ,"kategori":"seafood",
+            "harga": 1000
+        }
+
+    ]
+}
