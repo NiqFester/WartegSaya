@@ -1,6 +1,6 @@
 import Header from "@/component/header/header";
 import Footing from "@/component/footer/footer";
-import BannerPesanan from "@/component/banner/bannerPesanan";
+import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import List from "@/component/Pesanan/list";
 import Total from "@/component/Pesanan/total";
 import Image from "next/image";

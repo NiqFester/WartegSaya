@@ -1,4 +1,4 @@
-export default function BannerPesanan({url, text}) {
+export default function BannerPesanan({url, text}:{url:string,text:string}) {
   return (
     <div className=" mt-7 bg-cover bg-center h-[25vh]"
     style={{backgroundImage: `url(${url})`}}>

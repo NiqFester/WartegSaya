@@ -1,4 +1,4 @@
-function ImageWithCaption({ text, url }) {
+function ImageWithCaption({ text, url }:{ text:string, url:string }) {
   return (
     <div
       className={` w-[140px] h-[140px] bg-cover rounded-lg`}

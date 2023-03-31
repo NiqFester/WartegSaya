@@ -1,8 +1,10 @@
 import Image from "next/image";
 import {PesananContext} from '@/context/Pesanan'
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
+import './global'
 
-export default function List({url,nama,harga,jumlah,id, setArrPesanan}) {
+export default function List({url,nama,harga,jumlah,id, setArrPesanan}:
+  {url:string,nama:string,harga:number,jumlah:number,id:number, setArrPesanan:Dispatch<SetStateAction<arrPesanan[]>>}) {
   const {setPesanan} = useContext(PesananContext)
   return (
     <div className="grid grid-cols-5 grid-rows-3 mx-4 my-6 h-[65px]">

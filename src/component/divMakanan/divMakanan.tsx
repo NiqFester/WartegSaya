@@ -1,15 +1,16 @@
 import Image from "next/image";
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import {PesananContext} from '@/context/Pesanan'
+import '../../../global'
 
-function formatHarga(x) {
+function formatHarga(x:number) {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
   }).format(x);
 }
-export default function DivMakanan({ src, text, harga,id }) {
-  const {Pesanan,setPesanan} = useContext(PesananContext)
+export default function DivMakanan({ src, text, harga,id }:{ src:string, text:string, harga:number,id:number }) {
+  const {Pesanan,setPesanan}:Pesanan = useContext(PesananContext)
   return (
     <>
     <div className="flex flex-col">
@@ -28,7 +29,7 @@ export default function DivMakanan({ src, text, harga,id }) {
     <button onClick={()=>{
       if (Pesanan.findIndex(x=>x.id===id)===-1){
       console.log(Pesanan);
-      setPesanan(prev=>[...prev, {id:id, jumlah:1}])
+      setPesanan((prev:[])=>[...prev, {id:id, jumlah:1}])
 
       }
       console.log(Pesanan);

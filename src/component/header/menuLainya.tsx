@@ -1,5 +1,8 @@
 import Link from 'next/link';
-export default function MenuLainya({menu,setMenu,tipe}){
+import { Dispatch, SetStateAction } from 'react';
+
+export default function MenuLainya({menu,setMenu,tipe}:
+  {menu:boolean[],setMenu:Dispatch<SetStateAction<Array<boolean>>>,tipe:string[]}){
     return (
         <div
         style={{ display: menu[0] ? "flex" : "none" }}

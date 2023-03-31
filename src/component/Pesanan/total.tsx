@@ -1,4 +1,4 @@
-export default function Total({total}) {
+export default function Total({total}:{total:number}) {
   return (
     <>
       <div className="flex justify-between mt-2 mx-4 border-b-black border-b">
@@ -14,7 +14,7 @@ export default function Total({total}) {
     </>
   );
 }
-function formatHarga(x) {
+function formatHarga(x:number) {
   return new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",

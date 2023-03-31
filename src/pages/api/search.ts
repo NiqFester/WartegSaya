@@ -1,10 +1,11 @@
 import path from "path";
 import fs from "fs"; //allows to read and overwrite data
-
-function extractData(filePath) {
+import type { NextApiRequest, NextApiResponse } from 'next'
+import './global'
+function extractData(filePath:string) {
   //extract data.json and extract the data
-  const jsonData = fs.readFileSync(filePath);
-  const data = JSON.parse(jsonData);
+  const jsonData= fs.readFileSync(filePath);
+  const data = JSON.parse(jsonData.toString());
   return data;
 }
 
@@ -18,10 +19,10 @@ function buildPath() {
 }
 const filepath = buildPath();
 
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res:NextApiResponse) {
   const {method,query} = req
   const {search}= query
-  const {Produk} = extractData(filepath)
+  const {Produk}:{Produk: produk[]} = extractData(filepath)
   let returnedObj = {
   }
   if (method=== "GET") {
@@ -29,7 +30,7 @@ export default function handler(req, res) {
       if(search===''){
         return el
       }
-      return el.nama.toLowerCase().includes(search)
+      return el.nama.toLowerCase().includes(typeof search==="string"?search:typeof search==="undefined"?'nothing':Array.isArray(search)?search[0]:'else')
     })
     returnedObj= {message:'success', data:filteredData.slice(0,3)}
   }

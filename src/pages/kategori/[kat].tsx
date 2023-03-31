@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
-import BannerPesanan from "@/component/banner/bannerPesanan";
+import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import Header from "@/component/header/header";
 import Footing from "@/component/footer/footer";
 import DivMakanan from '@/component/divMakanan/divMakanan'
