@@ -8,7 +8,7 @@ export default function Total({total,pesanWA}:{total:number,pesanWA:string[]}) {
       </div>
       <div className="flex justify-between mt-2 mx-4">
         <div></div>
-        <a href={`https://wa.me/6281290167102?text=${pesanWA.join('%0A')}%0ATerima%20Kasih`} className=" rounded-3xl px-2  border-black border  ">
+        <a href={`https://wa.me/6281290167102?text=Saya%20Mau%20Pesan%0A${pesanWA.join('%0A')}%0ATerima%20Kasih`} className=" rounded-3xl px-2  border-black border  ">
           Pesan
         </a>
       </div>
