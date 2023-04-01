@@ -1,3 +1,4 @@
+import Link from 'next/link';
 function ImageWithCaption({ text, url, link }:{ text:string, url:string, link:string }) {
   return (
     <div
@@ -6,9 +7,9 @@ function ImageWithCaption({ text, url, link }:{ text:string, url:string, link:st
         backgroundImage: `url(${url})`,
       }}
     >
-      <div className=" rounded-lg backdrop-brightness-50 flex flex-col justify-center w-full h-full">
+      <Link href={`/kategori/${link}`} className=" rounded-lg backdrop-brightness-50 flex flex-col justify-center w-full h-full">
         <p className="text-center text-white font-serif text-lg">{text}</p>
-      </div>
+      </Link>
     </div>
   );
 }
