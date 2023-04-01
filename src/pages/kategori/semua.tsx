@@ -2,8 +2,14 @@ import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import Header from "@/component/header/header";
 import Footing from "@/component/footer/footer";
 import DivMakanan from '@/component/divMakanan/divMakanan'
+import IconP from "@/component/iconpesanan/iconpesanan";
+import IconN from "@/component/iconpesanan/iconnomor"
+import { useContext } from "react";
+import { PesananContext } from "@/context/Pesanan";
 
 export default function Semua({data}:{data: produk[]}){
+  const {Pesanan} = useContext(PesananContext)
+
     return (
         <div>
       <Header data={data} />
@@ -14,7 +20,8 @@ export default function Semua({data}:{data: produk[]}){
         })}
       </div>
       <div className="w-[100vw] h-[80px] bg-transparent"></div>
-
+      <IconP />
+      <IconN no={Pesanan.length} />
       <Footing />
     </div>
     )

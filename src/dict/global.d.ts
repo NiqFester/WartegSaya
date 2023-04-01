@@ -12,10 +12,13 @@ interface arrPesanan {
 }
 
 interface produk {
-  id: 0;
+  id: number;
   nama: string;
   photo: string;
   kategori: string;
   harga: number;
 }
 
+interface props {
+  data: produk[];
+}

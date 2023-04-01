@@ -3,6 +3,10 @@ import BannerPesanan from "@/component/Banner/bannerUtkPesanan";
 import Header from "@/component/header/header";
 import Footing from "@/component/footer/footer";
 import DivMakanan from '@/component/divMakanan/divMakanan'
+import IconP from "@/component/iconpesanan/iconpesanan";
+import IconN from "@/component/iconpesanan/iconnomor"
+import { useContext } from "react";
+import { PesananContext } from "@/context/Pesanan";
 
 interface Produks {
   id: number;
@@ -17,6 +21,7 @@ interface props {
 }
 
 const Kat = ({ data }: props) => {
+  const {Pesanan} = useContext(PesananContext)
   
   const { Produk, tipe } = data;
 
@@ -30,7 +35,8 @@ const Kat = ({ data }: props) => {
         })}
       </div>
       <div className="w-[100vw] h-[80px] bg-transparent"></div>
-
+      <IconP />
+      <IconN no={Pesanan.length} />
       <Footing />
     </div>
   );

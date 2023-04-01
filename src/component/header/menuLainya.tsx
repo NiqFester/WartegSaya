@@ -16,6 +16,12 @@ export default function MenuLainya({menu,setMenu,tipe}:
         >
           <p className="text-white text-2xl text-left">Menu</p>
         </button>
+        <Link
+          href={"/pesanan"}
+          className="border-b-white border-b pb-2 ml-6 mr-2"
+        >
+          <p className="text-white text-lg">Pesanan</p>
+        </Link>
         <button
           onClick={() => {
             setMenu((prev) => [prev[0], !prev[1]]);
@@ -43,21 +49,13 @@ export default function MenuLainya({menu,setMenu,tipe}:
             );
           })}
         </div>
-        <div className="border-b-white border-b pb-2 ml-6 mr-2">
+        <Link href={'/tentang'} className="border-b-white border-b pb-2 ml-6 mr-2">
           <p className="text-white capitalize text-lg">tentang</p>
-        </div>
-        <div className="border-b-white border-b pb-2 ml-6 mr-2">
-          <p className="text-white text-lg">Kontak</p>
-        </div>
-        <div className="border-b-white border-b pb-2 ml-6 mr-2">
-          <p className="text-white text-lg">Admin</p>
-        </div>
-        <Link
-          href={"/pesanan"}
-          className="border-b-white border-b pb-2 ml-6 mr-2"
-        >
-          <p className="text-white text-lg">Pesanan</p>
         </Link>
+        <Link href={'/'} className="border-b-white border-b pb-2 ml-6 mr-2">
+          <p className="text-white capitalize text-lg">Beranda</p>
+        </Link>
+        
       </div>
     )
 }

@@ -1,7 +1,7 @@
-function ImageWithCaption({ text, url }:{ text:string, url:string }) {
+function ImageWithCaption({ text, url, link }:{ text:string, url:string, link:string }) {
   return (
     <div
-      className={` w-[140px] h-[140px] bg-cover rounded-lg`}
+      className={` w-min-[100px] w-max-[150px] h-[140px] bg-cover rounded-lg`}
       style={{
         backgroundImage: `url(${url})`,
       }}
